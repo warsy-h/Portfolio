@@ -502,5 +502,8 @@ form button:hover {
         height: 70px;
     }
 
+    .skills, .biography, .projects-section, .contact-section {
+        scroll-margin-top: 90px; 
+    }
 }
 
