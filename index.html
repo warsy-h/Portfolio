@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://em-content.zobj.net/thumbs/320/apple/325/ribbon_1f380.png" type="image/png">
+    
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="portfolio-link">Portfolio</a>
+
+
+        <div class="profile-mobile">
+            <img src="moi_grrr.jpg" alt="Profile Photo" class="profile-img">
+            <h5 class="name">Hfaya Siwar</h5>
+        </div>
+
+        <nav class="navbar">
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#biography">Biographie</a>
+                </li>
+                <li>
+                    <a href="#projects">Projets</a>
+                </li>
+                <li>
+                    <a href="#skills">Compétences</a>
+                </li>
+                <li>
+                    <a href="#contact">Me contacter</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+
+        <div class="profile">
+            <img src="moi_grrr.jpg" alt="Photo de profil de Hfaya Siwar" class="profile-img">
+            <div class="profile-info">
+                <h5 id="name">Hfaya Siwar</h5>
+            </div>
+        </div>
+        
+
+        <section class="banner">
+            <h4>Etudiante en MMI</h4>
+        </section>
+
+        <section class="biography section" id="biography">
+            <h2 class="title">Biographie</h2>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum urna risus, imperdiet ut maximus a, semper sit amet libero. Praesent sit amet lectus eu dolor vehicula vulputate. Maecenas ac dapibus ex, sit amet scelerisque lorem...</p>
+            </div>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum urna risus, imperdiet ut maximus a, semper sit amet libero. Praesent sit amet lectus eu dolor vehicula vulputate. Maecenas ac dapibus ex, sit amet scelerisque lorem...</p>
+            </div>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum urna risus, imperdiet ut maximus a, semper sit amet libero. Praesent sit amet lectus eu dolor vehicula vulputate. Maecenas ac dapibus ex, sit amet scelerisque lorem...</p>
+            </div>
+        </section>
+
+        <section class="projects-section section" id="projects">
+            <h2>Mes projets</h2>
+            
+            <div class="projects-container"> 
+
+                <div class="project-card">
+                    <span class="project-number">1</span>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-number">2</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2>Compétences</h2>
+        </section>
+
+        <section class="contact-section section" id="contact">
+            <h2>Me contacter</h2>
+            <form action="#" method="post">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+        
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        
+
+        <div class="bottom-space"></div>
+        
+    </main>
+
+    <script>
+        // Fonction pour détecter les sections visibles
+        function revealOnScroll() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionBottom = section.getBoundingClientRect().bottom;
+                const viewportHeight = window.innerHeight;
+    
+                // Vérifie si la section est partiellement visible
+                if (sectionTop < viewportHeight && sectionBottom > 0) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible'); // Retire la classe si elle sort du viewport
+                }
+            });
+        }
+    
+        // Ajoute les événements pour le défilement
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll); // Exécute au chargement initial
+    </script>   
+    
+    <script>
+        document.querySelector('.burger').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open'); // Ajoute ou retire la classe `open`
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.remove('open'); // Retirer la classe `open` pour fermer le menu
+            });
+        });
+
+    </script>
+    
+</body>
+</html>
