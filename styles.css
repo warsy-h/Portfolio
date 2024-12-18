@@ -20,7 +20,6 @@ body {
 
 /* section de la navbar */
 .header {
-   
     display: flex;
     z-index: 1000;
     justify-content: space-between;
@@ -497,6 +496,10 @@ form button:hover {
 
     .banner {
         margin-top: 30%;
+    }
+
+    .header {
+        height: 70px;
     }
 
 }
