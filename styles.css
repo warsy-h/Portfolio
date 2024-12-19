@@ -6,19 +6,22 @@ body {
     color: #fff;
 }
 
-
 .section {
     opacity: 0;
-    transform: translateY(20px); /* Légèrement décalé vers le bas */
+    transform: translateY(20px);
+    /* Légèrement décalé vers le bas */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .section.visible {
     opacity: 1;
-    transform: translateY(0); /* Revient à sa position initiale */
+    transform: translateY(0);
+    /* Revient à sa position initiale */
 }
 
+
 /* section de la navbar */
+
 .header {
     display: flex;
     z-index: 1000;
@@ -42,20 +45,28 @@ body {
 }
 
 .bottom-space {
-    position: fixed; /* Fixe l'élément en bas de l'écran */
-    bottom: 0; /* Positionne l'élément en bas */
-    left: 0; /* Aligne l'élément à gauche */
-    width: 100%; /* Assure que l'élément occupe toute la largeur de l'écran */
-    height: 10px; /* Ajuste la hauteur de l'espace */
-    background-color: #444; 
+    position: fixed;
+    /* Fixe l'élément en bas de l'écran */
+    bottom: 0;
+    /* Positionne l'élément en bas */
+    left: 0;
+    /* Aligne l'élément à gauche */
+    width: 100%;
+    /* Assure que l'élément occupe toute la largeur de l'écran */
+    height: 10px;
+    /* Ajuste la hauteur de l'espace */
+    background-color: #444;
 }
 
 .profile-mobile {
     display: none;
 }
 
-.skills, .biography, .projects-section, .contact-section {
-    scroll-margin-top: 115px; 
+.skills,
+.biography,
+.projects-section,
+.contact-section {
+    scroll-margin-top: 115px;
 }
 
 .navbar {
@@ -72,7 +83,8 @@ body {
     gap: 5px;
     justify-content: right;
     transform: translateX(-40px);
-    list-style: none; /* Retire les puces des listes */
+    list-style: none;
+    /* Retire les puces des listes */
     margin: 0;
     padding: 0;
 }
@@ -93,12 +105,11 @@ body {
     color: #ffb6c1;
 }
 
-
 .portfolio-link {
     color: #fff;
     text-decoration: none;
     font-size: 35px;
-    text-shadow: 0 4px 8px rgba(17, 17, 17, 0.3); 
+    text-shadow: 0 4px 8px rgba(17, 17, 17, 0.3);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -112,7 +123,7 @@ body {
 .profile-img {
     width: 50px;
     height: 65px;
-    border-radius: 20px; 
+    border-radius: 20px;
     object-fit: cover;
     padding: 10px;
 }
@@ -122,7 +133,7 @@ body {
     font-weight: bold;
     font-family: 'Cookie', cursive;
     margin-left: 5px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .banner {
@@ -138,7 +149,7 @@ body {
 
 .banner h4 {
     font-size: 18px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .biography {
@@ -155,9 +166,9 @@ body {
     font-size: 28px;
     margin-bottom: 30px;
     font-family: 'Cambria', serif;
-    color: #ffffff; 
+    color: #ffffff;
     position: relative;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .biography h2::after {
@@ -176,34 +187,37 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    flex: 1 1 100%; /* Occupe toute la largeur sur mobile */
-    max-width: 90%; 
+    flex: 1 1 100%;
+    /* Occupe toute la largeur sur mobile */
+    max-width: 90%;
     margin: 10px;
 }
 
 .logo a {
     display: flex;
-    font-family: 'Pacifico', cursive; 
+    font-family: 'Pacifico', cursive;
     font-size: 24px;
     text-decoration: none;
     color: #fff;
 }
 
+
 /* Section des projets */
+
 .projects-section {
     text-align: center;
     padding: 50px 20px;
     margin-bottom: 10%;
-    color: #fff; 
+    color: #fff;
 }
 
 .projects-section h2 {
     font-size: 28px;
     margin-bottom: 30px;
     font-family: 'Cambria', serif;
-    color: #ffffff; 
+    color: #ffffff;
     position: relative;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .projects-section h2::after {
@@ -216,42 +230,48 @@ body {
     border-radius: 2px;
 }
 
+
 /* Contenu des projets */
+
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 20px; 
-    flex-wrap: wrap; 
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+
 /* Carte de projet */
+
 .project-card {
-    width: 200px; 
-    height: 200px; 
-    background-color: #ffc0cb; 
-    border-radius: 20px; 
+    width: 200px;
+    height: 200px;
+    background-color: #ffc0cb;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    color: #4a4a4a; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    color: #4a4a4a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card h3 {
-    font-size: 36px; 
+    font-size: 36px;
     font-weight: bold;
-    color: #4a4a4a; 
+    color: #4a4a4a;
 }
 
 .project-card:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); 
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
+
 /* section des compétences */
+
 .skills {
     border: 3px solid;
     border-color: #FBC9D8;
@@ -262,10 +282,10 @@ body {
     font-size: 28px;
     margin-bottom: 30px;
     font-family: 'Cambria', serif;
-    color: #ffffff; 
+    color: #ffffff;
     position: relative;
     text-align: center;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .skills h2::after {
@@ -278,7 +298,9 @@ body {
     border-radius: 2px;
 }
 
+
 /* section de contact */
+
 .contact-section {
     margin-top: 100px;
     text-align: center;
@@ -289,7 +311,7 @@ body {
     font-size: 28px;
     margin-bottom: 20px;
     font-family: 'Cambria', serif;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .contact-section h2::after {
@@ -311,14 +333,14 @@ form {
     margin: 0 auto;
     background-color: #5a5a5a;
     padding: 20px;
-    border: 3px solid transparent; 
+    border: 3px solid transparent;
     border-radius: 10px;
-    transition: border 0.3s ease, box-shadow 0.3s ease; 
+    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 form:hover {
-    border-color: #ffc0cb; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border-color: #ffc0cb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 form label {
@@ -345,27 +367,29 @@ form textarea {
 
 form button {
     margin: 15px;
-    padding: 7px 15px; 
-    font-size: 15px; 
-    font-family: 'Cambria', serif; 
-    font-weight: bold; 
-    border: none; 
-    border-radius: 30px; 
-    background-color: #ffc0cb; 
-    color: #333; 
-    cursor: pointer; 
+    padding: 7px 15px;
+    font-size: 15px;
+    font-family: 'Cambria', serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffc0cb;
+    color: #333;
+    cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 form button:hover {
     background-color: #e08e9d;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
 }
 
+
 /* Default styles for larger screens */
+
 .nav-links {
     display: flex;
     justify-content: space-between;
@@ -376,9 +400,9 @@ form button:hover {
     .banner {
         margin-top: 18%;
     }
-
     .burger {
-        display: flex; /* Affiche le burger sur mobile */
+        display: flex;
+        /* Affiche le burger sur mobile */
         flex-direction: column;
         justify-content: space-around;
         width: 30px;
@@ -386,7 +410,6 @@ form button:hover {
         cursor: pointer;
         z-index: 2;
     }
-
     .burger span {
         width: 100%;
         height: 3px;
@@ -394,12 +417,13 @@ form button:hover {
         border-radius: 3px;
         transition: all 0.3s ease;
     }
-
     .nav-links {
-        display: none; /* Cacher le menu par défaut */
+        display: none;
+        /* Cacher le menu par défaut */
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Placer sous le header */
+        top: 70px;
+        /* Placer sous le header */
         right: 0;
         background-color: #444;
         width: 100%;
@@ -408,18 +432,15 @@ form button:hover {
         transition: height 0.3s ease;
         z-index: 1;
     }
-
     .nav-links.open {
         display: flex;
         height: auto;
         padding: 10px 0;
     }
-
     .nav-links li {
         text-align: center;
         margin: 10px 0;
     }
-
     .nav-links a {
         text-decoration: none;
         color: #fff;
@@ -427,17 +448,15 @@ form button:hover {
         padding: 10px;
         transition: color 0.3s ease;
     }
-
     .nav-links a:hover {
         color: #ffb6c1;
     }
-
     .profile-mobile {
         display: flex;
         align-items: center;
-        gap: 2px; /* Espacement entre l'image et le texte */
+        gap: 2px;
+        /* Espacement entre l'image et le texte */
     }
-
     .profile-mobile .profile-img {
         width: 40px;
         height: 50px;
@@ -445,64 +464,57 @@ form button:hover {
         object-fit: cover;
         margin-left: -120px;
     }
-
     .profile-mobile .name {
         font-size: 25px;
         color: #fff;
         font-weight: bold;
         font-family: 'Cookie', cursive;
     }
-
     .profile {
         display: none;
     }
-
     .header-content {
-        flex-direction: row; 
+        flex-direction: row;
     }
 }
 
 @media (max-width: 500px) {
     .profile-mobile {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
         margin-top: 22px;
-        gap: 5px; 
+        gap: 5px;
     }
-
     .profile-mobile .profile-img {
-        width: 35px; 
+        width: 35px;
         height: 40px;
         border-radius: 20px;
         object-fit: cover;
         margin-bottom: -60%;
         margin-left: -40px;
     }
-
     .profile-mobile .name {
-        font-size: 20px; 
+        font-size: 20px;
         color: #fff;
         font-weight: bold;
         font-family: 'Cookie', cursive;
         margin-top: 10%;
         margin-left: -40px;
     }
-
     .portfolio-link {
         font-size: 25px;
     }
-
     .banner {
         margin-top: 20%;
     }
-
     .header {
         height: 70px;
     }
-
-    .skills, .biography, .projects-section, .contact-section {
-        scroll-margin-top: 90px; 
+    .skills,
+    .biography,
+    .projects-section,
+    .contact-section {
+        scroll-margin-top: 90px;
     }
 }
-
