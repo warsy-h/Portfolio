@@ -47,7 +47,7 @@ body {
     left: 0; /* Aligne l'élément à gauche */
     width: 100%; /* Assure que l'élément occupe toute la largeur de l'écran */
     height: 10px; /* Ajuste la hauteur de l'espace */
-    background-color: #444; /* Exemple de couleur de fond */
+    background-color: #444; 
 }
 
 .profile-mobile {
