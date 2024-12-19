@@ -98,7 +98,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 35px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 0 4px 8px rgba(17, 17, 17, 0.3); 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -490,7 +490,7 @@ form button:hover {
     }
 
     .portfolio-link {
-        font-size: 28px;
+        font-size: 25px;
     }
 
     .banner {
