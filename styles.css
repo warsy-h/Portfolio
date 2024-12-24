@@ -387,9 +387,6 @@ form button:hover {
     transform: scale(1.05);
 }
 
-
-/* Default styles for larger screens */
-
 .nav-links {
     display: flex;
     justify-content: space-between;
@@ -402,21 +399,39 @@ form button:hover {
     }
     .burger {
         display: flex;
-        /* Affiche le burger sur mobile */
         flex-direction: column;
         justify-content: space-around;
         width: 30px;
-        height: 21px;
+        height: 24px;
         cursor: pointer;
         z-index: 2;
+        transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     }
     .burger span {
         width: 100%;
         height: 3px;
         background-color: #fff;
         border-radius: 3px;
-        transition: all 0.3s ease;
+        transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, opacity 0.3s ease;
+        position: relative;
     }
+    /* Animation du burger : transformation en X */
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .burger:hover span {
+        background-color: #ffb6c1;
+    }
+    .burger.active:hover span {
+        background-color: #ffb6c1;
+    }
+    /* Menu */
     .nav-links {
         display: none;
         /* Cacher le menu par défaut */
@@ -427,14 +442,18 @@ form button:hover {
         right: 0;
         background-color: #444;
         width: 100%;
-        height: 0;
+        max-height: 0;
+        /* Réduire à zéro */
         overflow: hidden;
-        transition: height 0.3s ease;
+        transition: max-height 0.5s ease, padding 0.3s ease;
+        /* Transition sur max-height */
         z-index: 1;
     }
+    /* Menu ouvert avec animation */
     .nav-links.open {
         display: flex;
-        height: auto;
+        max-height: 500px;
+        /* Limite la hauteur maximale du menu (ajuster si nécessaire) */
         padding: 10px 0;
     }
     .nav-links li {
@@ -455,7 +474,6 @@ form button:hover {
         display: flex;
         align-items: center;
         gap: 2px;
-        /* Espacement entre l'image et le texte */
     }
     .profile-mobile .profile-img {
         width: 40px;

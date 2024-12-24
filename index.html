@@ -22,7 +22,7 @@
         </div>
 
         <nav class="navbar">
-            <div class="burger">
+            <div class="burger" onclick="toggleMenu(this)">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -138,18 +138,24 @@
     </script>
 
     <script>
-        document.querySelector('.burger').addEventListener('click', () => {
+        // Fonction pour ouvrir/fermer le menu et activer l'animation du burger
+        function toggleMenu(burger) {
             const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('open'); // Ajoute ou retire la classe `open`
-        });
+            navLinks.classList.toggle('open'); // Ouvre/ferme le menu
+            burger.classList.toggle('active'); // Animation du burger
+        }
 
+        // Fermer le menu lorsqu'un lien est cliqué
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 const navLinks = document.querySelector('.nav-links');
-                navLinks.classList.remove('open'); // Retirer la classe `open` pour fermer le menu
+                const burger = document.querySelector('.burger');
+                navLinks.classList.remove('open'); // Ferme le menu
+                burger.classList.remove('active'); // Réinitialise l'animation du burger
             });
         });
     </script>
+
 
 </body>
 
