@@ -433,27 +433,22 @@ form button:hover {
     }
     /* Menu */
     .nav-links {
-        display: none;
-        /* Cacher le menu par défaut */
+        display: none; /* Cacher le menu par défaut */
         flex-direction: column;
         position: absolute;
-        top: 70px;
-        /* Placer sous le header */
+        top: 70px;  /* Placer sous le header */
         right: 0;
         background-color: #444;
         width: 100%;
-        max-height: 0;
-        /* Réduire à zéro */
+        max-height: 0; /* Réduire à zéro */
         overflow: hidden;
-        transition: max-height 0.5s ease, padding 0.3s ease;
-        /* Transition sur max-height */
+        transition: max-height 0.5s ease, padding 0.3s ease; /* Transition sur max-height */
         z-index: 1;
     }
     /* Menu ouvert avec animation */
     .nav-links.open {
         display: flex;
-        max-height: 500px;
-        /* Limite la hauteur maximale du menu (ajuster si nécessaire) */
+        max-height: 500px; /* Limite la hauteur maximale du menu (ajuster si nécessaire) */
         padding: 10px 0;
     }
     .nav-links li {
