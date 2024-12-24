@@ -149,7 +149,7 @@ body {
 
 .banner h4 {
     font-size: 18px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 8px rgba(61, 61, 61, 0.377);
 }
 
 .biography {
@@ -550,9 +550,13 @@ form button:hover {
     }
     .nav-links {
         top: 95%;
+        margin-right: 20px;
     }
     .banner {
         margin-top: 20%;
+    }
+    .banner h4 {
+        font-size: 18px;
     }
     .header {
         height: 70px;
