@@ -438,6 +438,12 @@ form button:hover {
         position: absolute;
         top: 70px;
         /* Placer sous le header */
+        display: flex;
+        /* Menu en flex */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        /* Placer le menu juste en dessous du header */
         right: 0;
         padding: 20px;
         background-color: #444;
@@ -448,6 +454,12 @@ form button:hover {
         transition: max-height 0.5s ease, padding 0.3s ease;
         /* Transition sur max-height */
         z-index: 1;
+        height: auto;
+        overflow: hidden;
+        transform: translateX(100%);
+        /* Le menu commence à être caché à droite */
+        transition: transform 0.3s ease;
+        /* Transition de déplacement */
     }
     /* Menu ouvert */
     .nav-links.open {
@@ -455,6 +467,14 @@ form button:hover {
         max-height: 500px;
         /* Limite la hauteur maximale du menu (ajuster si nécessaire) */
         padding: 10px 0;
+        transform: translateX(0);
+        /* Le menu glisse de la droite vers la gauche */
+    }
+    .nav-links.open a {
+        opacity: 1;
+        /* Les liens deviennent visibles */
+        transform: translateX(0);
+        /* Les liens arrivent vers le centre */
     }
     .nav-links li {
         text-align: center;
