@@ -98,11 +98,12 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ffb6c1;
+    font-size: 18px;
 }
 
 .portfolio-link {
@@ -484,16 +485,11 @@ form button:hover {
         color: #fff;
         font-size: 18px;
         padding: 10px;
-        transition: color 0.3s ease;
+        transition: color 0.3s ease, font-size 0.3s ease;
     }
     .nav-links a:hover {
         color: #ffb6c1;
         font-size: 20px;
-        transition: color 0.3s ease, font-size 0.3s ease;
-    }
-    .nav-links a:not(:hover) {
-        transition: color 0.3s ease, font-size 0.3s ease;
-        /* Transition inversée lors de la sortie du curseur */
     }
     .profile-mobile {
         display: flex;
