@@ -80,11 +80,10 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 5px;
+    gap: 20px;
     justify-content: right;
     transform: translateX(-40px);
     list-style: none;
-    /* Retire les puces des listes */
     margin: 0;
     padding: 0;
 }
@@ -359,6 +358,15 @@ form textarea {
     background-color: #e9d5db;
     color: #333;
     outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 2px solid #ffc0cb;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 192, 203, 0.8);
+    transition: border 0.2s ease, box-shadow 0.3s ease;
 }
 
 .message {
@@ -386,12 +394,6 @@ form button:hover {
     background-color: #e08e9d;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
 }
 
 @media (max-width: 768px) {
