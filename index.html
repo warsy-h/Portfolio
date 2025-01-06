@@ -19,10 +19,6 @@
         </a>
 
 
-        <div class="profile-mobile">
-            <img src="moi_grrr.jpg" alt="Profile Photo" class="profile-img">
-            <h5 class="name">Hfaya Siwar</h5>
-        </div>
 
         <nav class="navbar">
             <div class="burger" onclick="toggleMenu(this)">
@@ -132,7 +128,7 @@
     </main>
 
     <script>
-        // Fonction pour détecter les sections visibles
+        // Script 1 : Détection des sections visibles
         function revealOnScroll() {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
@@ -152,10 +148,8 @@
         // Ajoute les événements pour le défilement
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll); // Exécute au chargement initial
-    </script>
 
-    <script>
-        // Fonction pour ouvrir/fermer le menu et activer l'animation du burger
+        // Script 2 : Gestion du menu burger et de son animation
         function toggleMenu(burger) {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('open'); // Ouvre/ferme le menu
@@ -171,10 +165,8 @@
                 burger.classList.remove('active'); // Réinitialise l'animation du burger
             });
         });
-    </script>
 
-    <script>
-        // Script pour gérer l'animation
+        // Script 3 : Gestion de l'animation d'intro
         document.addEventListener('DOMContentLoaded', () => {
             const introAnimation = document.querySelector('.intro-animation');
             const mainContent = document.querySelector('.main-content');
@@ -185,9 +177,8 @@
                 mainContent.classList.add('visible');
             }, 1000); // Temps avant l'animation de sortie
         });
-    </script>
 
-    <script>
+        // Script 4 : Gestion de l'ombre sur le header
         document.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             const biographySection = document.querySelector('#biography');
@@ -202,6 +193,7 @@
             }
         });
     </script>
+
 
 </body>
 
