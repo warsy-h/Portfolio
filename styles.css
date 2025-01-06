@@ -671,4 +671,13 @@ form button:hover {
     .contact-section {
         scroll-margin-top: 90px;
     }
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 36%;
+    }
+    .portfolio-link {
+        margin-left: 35px;
+    }
 }
