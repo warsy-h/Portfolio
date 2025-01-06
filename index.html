@@ -13,7 +13,10 @@
 
 <body>
     <header class="header">
-        <a href="#" class="portfolio-link">Portfolio</a>
+        <a href="#" class="portfolio">
+            <img src="logo-img-cartoon-petite.JPG" alt="logo portfolio" class="portfolio-img">
+            <p class="portfolio-link">SH</p>
+        </a>
 
 
         <div class="profile-mobile">
@@ -28,6 +31,9 @@
                 <span></span>
             </div>
             <ul class="nav-links">
+                <li>
+                    <a href="#accueil">Accueil</a>
+                </li>
                 <li>
                     <a href="#biography">Biographie</a>
                 </li>
@@ -46,7 +52,7 @@
     </header>
     <main>
 
-        <section class="presentation">
+        <section class="presentation" id="accueil">
             <div class="intro-animation">
                 <div class="logo-container">
                     <div class="logo-part left">S</div>
@@ -56,7 +62,7 @@
             <div class="intro-section">
                 <div class="intro">
                     <h5 class="hello">Hello, je suis</h5>
-                    <h1 class="intro-title">Siwar HFAYA</h1>
+                    <h1 class="intro-title">Siwar Hfaya</h1>
                     <p class="intro-description">Développeuse passionné par le web et le design.</p>
                     <a href="#biography" class="button">Me découvir</a>
                 </div>
@@ -178,6 +184,22 @@
                 introAnimation.classList.add('hidden');
                 mainContent.classList.add('visible');
             }, 1000); // Temps avant l'animation de sortie
+        });
+    </script>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const biographySection = document.querySelector('#biography');
+            const biographySectionTop = biographySection.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            // Ajouter l'ombre dès que la section biography commence à entrer dans la vue
+            if (biographySectionTop <= viewportHeight * 0.3) { // 30% de la hauteur du viewport
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     </script>
 
