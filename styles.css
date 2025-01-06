@@ -104,10 +104,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-
-/* Landing Section */
-
-.landing-section {
+.intro-section {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -122,6 +119,11 @@ body {
     animation: fadeInUp 1s ease-in-out;
 }
 
+.hello {
+    margin-bottom: 200px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
 .intro-title {
     font-size: 48px;
     font-family: 'Abril Fatface', serif;
@@ -132,13 +134,85 @@ body {
 
 .intro-description {
     font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    margin-top: -20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 50px;
     color: #ffffff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.cta-button {
+.intro-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-part {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    z-index: 2;
+    transition: transform 1s ease, opacity 0.5s ease;
+}
+
+.logo-part.left {
+    transform-origin: right center;
+}
+
+.logo-part.right {
+    transform-origin: left center;
+}
+
+
+/* Animation finale */
+
+.intro-animation.hidden .logo-part.left {
+    transform: translateX(-100%) rotateY(90deg);
+}
+
+.intro-animation.hidden .logo-part.right {
+    transform: translateX(100%) rotateY(90deg);
+}
+
+.intro-animation.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease 1s;
+}
+
+
+/* Contenu principal */
+
+.main-content {
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
+}
+
+.main-content.visible {
+    opacity: 1;
+}
+
+.main-content h1 {
+    color: #ffc0cb;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.button {
     display: inline-block;
     padding: 12px 24px;
     font-size: 18px;
@@ -151,7 +225,7 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cta-button:hover {
+.button:hover {
     background-color: #e08e9d;
     transform: scale(1.05);
 }
@@ -168,7 +242,8 @@ body {
 
 .biography h2 {
     font-size: 28px;
-    margin-bottom: -20px;
+    margin-top: -18px;
+    margin-bottom: -5px;
     font-family: 'Cambria', serif;
     color: #ffffff;
     position: relative;
@@ -195,20 +270,20 @@ body {
 }
 
 .profile-img {
-    width: 50px;
-    height: 65px;
-    border-radius: 20px;
+    width: 70px;
+    height: 90px;
+    border-radius: 16px;
     object-fit: cover;
-    padding: 10px;
     margin-top: 30px;
 }
 
 .profile-info {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
     font-family: 'Cookie', cursive;
-    margin-top: 5px;
+    margin-top: -30px;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: -50px;
 }
 
 .column {
@@ -302,7 +377,7 @@ body {
 
 .skills h2 {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-top: 30px;
     font-family: 'Cambria', serif;
     color: #ffffff;
     position: relative;

@@ -47,11 +47,18 @@
     <main>
 
         <section class="presentation">
-            <div class="landing-section">
+            <div class="intro-animation">
+                <div class="logo-container">
+                    <div class="logo-part left">S</div>
+                    <div class="logo-part right">H</div>
+                </div>
+            </div>
+            <div class="intro-section">
                 <div class="intro">
+                    <h5 class="hello">Hello, je suis</h5>
                     <h1 class="intro-title">Siwar HFAYA</h1>
                     <p class="intro-description">Développeuse passionné par le web et le design.</p>
-                    <a href="#biography" class="cta-button">Me découvir</a>
+                    <a href="#biography" class="button">Me découvir</a>
                 </div>
             </div>
         </section>
@@ -61,7 +68,7 @@
             <div class="profile">
                 <img src="moi_grrr.jpg" alt="Photo de profil de Hfaya Siwar" class="profile-img">
                 <div class="profile-info">
-                    <h5 id="name">Hfaya Siwar</h5>
+                    <h5 id="name">Me</h5>
                 </div>
             </div>
             <div class="column">
@@ -160,6 +167,19 @@
         });
     </script>
 
+    <script>
+        // Script pour gérer l'animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const introAnimation = document.querySelector('.intro-animation');
+            const mainContent = document.querySelector('.main-content');
+
+            // Après 2 secondes, lancer l'animation de l'intro
+            setTimeout(() => {
+                introAnimation.classList.add('hidden');
+                mainContent.classList.add('visible');
+            }, 1000); // Temps avant l'animation de sortie
+        });
+    </script>
 
 </body>
 
