@@ -415,24 +415,33 @@ body {
 /* Carte de projet */
 
 .project-card {
-    width: 200px;
-    height: 200px;
-    background-color: #ffc0cb;
+    width: 250px;
+    height: 250px;
+    background-color: #ffcfd7d0;
     border-radius: 20px;
     display: flex;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #4a4a4a;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.884);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card h3 {
-    font-size: 36px;
+.image-legende {
+    font-size: 14px;
+    color: #424242;
     font-weight: bold;
-    color: #4a4a4a;
+    text-shadow: 0 2px 2px #ffd6dc;
 }
 
 .project-card:hover {
