@@ -447,7 +447,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 20px #e08e9d;
 }
 
 
