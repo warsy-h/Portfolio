@@ -491,6 +491,7 @@ body {
     gap: 20px;
     flex-wrap: wrap; 
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .skills-container {
