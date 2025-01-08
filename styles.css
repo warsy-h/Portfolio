@@ -454,10 +454,15 @@ body {
 /* section des compétences */
 
 .skills {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 3px solid;
     border-color: #FBC9D8;
-    padding-bottom: 30%;
+    padding-bottom: 10%;
+    gap: 20px;
+    padding: 20px;
 }
 
 .skills h2 {
@@ -480,32 +485,41 @@ body {
     border-radius: 2px;
 }
 
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
 .skills-container {
     background-color: #1c1c1c;
     border: solid #ffc0cb;
     border-radius: 12px;
-    padding: 20px;
+    padding: 40px;
     max-width: 400px;
     text-align: center;
-    margin-left: 80px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
     margin-bottom: 20px;
-  }
-  
-  .skills-container h3 {
+    flex: 1 1 40%; 
+}
+
+.skills-container h3 {
     color: #ffffff;
     margin-bottom: 20px;
     font-size: 15px;
-  }
-  
-  .skills-grid {
+    margin-top: -10px;
+}
+
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Affichage en 2 colonnes */
     gap: 20px;
-  }
-  
-  .skill {
+}
+
+.skill {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -513,24 +527,25 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skill i {
+}
+
+.skill i {
     font-size: 2rem;
     margin-bottom: 10px;
     color: #0033ff;
-  }
-  
-  .skill p {
+}
+
+.skill p {
     font-size: 1rem;
     font-weight: bold;
     margin: 0;
-  }
-  
-  .skill span {
+}
+
+.skill span {
     font-size: 0.9rem;
     color: #a0a0a0;
-  }
+}
+
 
 /* section de contact */
 
