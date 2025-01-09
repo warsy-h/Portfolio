@@ -535,6 +535,7 @@ body {
     height: 70px;
     width: 85%;
     text-align: center;
+    transition: color 1.4s ease, transform 0.3s ease;
 }
 
 .progress-bar {
@@ -584,6 +585,11 @@ body {
 .skill span {
     position: relative;
     z-index: 2;
+}
+
+.skill:hover,
+.skill p:hover {
+    color: #242424;
 }
 
 .skill p {
