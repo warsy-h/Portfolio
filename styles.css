@@ -355,7 +355,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: -32px;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: -50px;
+    margin-bottom: -30px;
 }
 
 .column {
@@ -365,7 +365,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     flex: 1 1 100%;
-    /* Occupe toute la largeur sur mobile */
     max-width: 90%;
     margin: 10px;
 }
@@ -399,18 +398,12 @@ body {
     border-radius: 2px;
 }
 
-
-/* Contenu des projets */
-
 .projects-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
-
-
-/* Carte de projet */
 
 .project-card {
     width: 250px;
@@ -535,7 +528,7 @@ body {
     height: 70px;
     width: 85%;
     text-align: center;
-    transition: color 1.4s ease, transform 0.3s ease;
+    transition: color 1.8s ease, transform 1s ease;
 }
 
 .progress-bar {
@@ -587,8 +580,11 @@ body {
     z-index: 2;
 }
 
-.skill:hover,
-.skill p:hover {
+.skill-text {
+    transition: color 1.8s ease;
+}
+
+.skill:hover .skill-text {
     color: #242424;
 }
 
@@ -600,7 +596,7 @@ body {
 
 .skill span {
     font-size: 0.9rem;
-    color: #a0a0a0;
+    color: #808080;
 }
 
 
