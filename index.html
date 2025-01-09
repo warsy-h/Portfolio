@@ -107,64 +107,82 @@
         <section class="skills section" id="skills">
             <h2>Compétences</h2>
             <div class="skills-wrapper">
-            
-              <div class="skills-container">
-                <h3>Développement Web</h3>
-                <div class="skills-grid">
+                <div class="skills-container">
+                    <h3>Développement Web</h3>
+                    <div class="skills-grid">
 
-                  <div class="skill">
-                    <i class="icon-html"></i>
-                    <p>HTML</p>
-                    <span>intermédiaire</span>
-                  </div>
+                        <div class="skill" data-progress="80">
+                            <i class="icon-html"></i>
+                            <p>HTML</p>
+                            <span>intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
 
-                  <div class="skill">
-                    <i class="icon-css"></i>
-                    <p>CSS</p>
-                    <span>intermédiaire</span>
-                  </div>
+                        <div class="skill" data-progress="80">
+                            <i class="icon-css"></i>
+                            <p>CSS</p>
+                            <span>intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
 
-                  <div class="skill">
-                    <i class="icon-php"></i>
-                    <p>PHP</p>
-                    <span>La théorie</span>
-                  </div>
+                        <div class="skill" data-progress="20">
+                            <i class="icon-php"></i>
+                            <p>PHP</p>
+                            <span>La théorie</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
-              </div>
-          
 
-              <div class="skills-container">
-                <h3>Web-Design</h3>
-                <div class="skills-grid">
-                  <div class="skill">
-                    <i class="icon-figma"></i>
-                    <p>Figma</p>
-                    <span>Les bases</span>
-                  </div>
+                <div class="skills-container">
+                    <h3>Web-Design</h3>
+                    <div class="skills-grid">
+                        <div class="skill" data-progress="20">
+                            <i class="icon-figma"></i>
+                            <p>Figma</p>
+                            <span>Léger</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
 
-                  <div class="skill">
-                    <i class="icon-premiere"></i>
-                    <p>Premier Pro</p>
-                    <span>Les bases</span>
-                  </div>
+                        <div class="skill" data-progress="40">
+                            <i class="icon-premiere"></i>
+                            <p>Premier Pro</p>
+                            <span>Les bases</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
 
-                  <div class="skill">
-                    <i class="icon-illustrator"></i>
-                    <p>Illustrator</p>
-                    <span>intermédiaire</span>
-                  </div>
+                        <div class="skill" data-progress="80">
+                            <i class="icon-illustrator"></i>
+                            <p>Illustrator</p>
+                            <span>intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
 
-                  <div class="skill">
-                    <i class="icon-photoshop"></i>
-                    <p>Photoshop</p>
-                    <span>intermédiaire</span>
-                  </div>
-
+                        <div class="skill" data-progress="65">
+                            <i class="icon-photoshop"></i>
+                            <p>Photoshop</p>
+                            <span>intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </section>
+        </section>
 
         <section class="contact-section section" id="contact">
             <h2>Me contacter</h2>
@@ -212,29 +230,13 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll); // Exécute au chargement initial
 
-        // Script 2 : Gestion du menu burger et de son animation
-        function toggleMenu(burger) {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('open'); // Ouvre/ferme le menu
-            burger.classList.toggle('active'); // Animation du burger
-        }
-
-        // Fermer le menu lorsqu'un lien est cliqué
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.querySelector('.nav-links');
-                const burger = document.querySelector('.burger');
-                navLinks.classList.remove('open'); // Ferme le menu
-                burger.classList.remove('active'); // Réinitialise l'animation du burger
-            });
-        });
 
         // Script 3 : Gestion de l'animation d'intro
         document.addEventListener('DOMContentLoaded', () => {
             const introAnimation = document.querySelector('.intro-animation');
             const mainContent = document.querySelector('.main-content');
 
-            // Après 2 secondes, lancer l'animation de l'intro
+
             setTimeout(() => {
                 introAnimation.classList.add('hidden');
                 mainContent.classList.add('visible');
@@ -254,6 +256,42 @@
             } else {
                 header.classList.remove('scrolled');
             }
+        });
+    </script>
+
+    <script>
+        function toggleMenu(menu) {
+            menu.classList.toggle('open');
+        }
+
+        function toggleMenu() {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        }
+    </script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const skills = document.querySelectorAll('.skill');
+
+            skills.forEach(skill => {
+                const progress = skill.querySelector('.progress');
+                const progressValue = skill.getAttribute('data-progress');
+
+                // Applique l'animation au chargement de la page (avant le survol)
+                progress.style.height = '0%';
+
+                skill.addEventListener('mouseenter', () => {
+                    progress.style.height = `${progressValue}%`; // Lors du survol, la hauteur est mise à jour
+                });
+
+                skill.addEventListener('mouseleave', () => {
+                    progress.style.height = '0%'; // Quand on quitte l'élément, la hauteur revient à 0
+                });
+            });
         });
     </script>
 

@@ -9,14 +9,12 @@ body {
 .section {
     opacity: 0;
     transform: translateY(20px);
-    /* Légèrement décalé vers le bas */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .section.visible {
     opacity: 1;
     transform: translateY(0);
-    /* Revient à sa position initiale */
 }
 
 .header {
@@ -462,7 +460,7 @@ body {
     border-color: #FBC9D8;
     padding-bottom: 10%;
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .skills h2 {
@@ -489,22 +487,24 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 50px;
+    margin: 0 10px
 }
 
 .skills-container {
     background-color: #1c1c1c;
     border: solid #ffc0cb;
     border-radius: 12px;
-    padding: 40px;
+    padding: 30px;
     max-width: 400px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
     margin-bottom: 20px;
-    flex: 1 1 40%; 
+    flex: 1 1 40%;
+    padding-left: 55px;
 }
 
 .skills-container h3 {
@@ -516,24 +516,74 @@ body {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Affichage en 2 colonnes */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    width: 90%;
+    margin: 0 10px
 }
 
 .skill {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #252525;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 70px;
+    width: 85%;
+    text-align: center;
 }
 
-.skill i {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #0033ff;
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.progress {
+    width: 100%;
+    height: 0%;
+    background-color: #ffc0cb;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: height 1s ease-in-out;
+    z-index: 1;
+}
+
+.skill:hover .progress {
+    height: var(--progress);
+}
+
+.skill[data-progress="80"] {
+    --progress: 80%;
+}
+
+.skill[data-progress="60"] {
+    --progress: 60%;
+}
+
+.skill[data-progress="40"] {
+    --progress: 40%;
+}
+
+.skill[data-progress="100"] {
+    --progress: 100%;
+}
+
+.skill p,
+.skill span {
+    position: relative;
+    z-index: 2;
 }
 
 .skill p {
@@ -646,9 +696,6 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-    .banner {
-        margin-top: 16%;
-    }
     .burger {
         display: flex;
         flex-direction: column;
@@ -667,7 +714,6 @@ form button:hover {
         border-radius: 3px;
         transition: all 0.3s ease;
     }
-    /* Animation du burger : transformation en X */
     .burger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -688,7 +734,7 @@ form button:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 80px;
+        top: 70px;
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -697,24 +743,19 @@ form button:hover {
         background-color: #1a1a1a;
         width: 100%;
         max-height: 0;
-        /* Réduire à zéro */
         overflow: hidden;
         transition: max-height 0.5s ease, padding 0.3s ease;
-        /* Transition sur max-height */
         z-index: 1;
         height: auto;
         overflow: hidden;
         transform: translateX(100%);
-        /* Le menu commence à être caché à droite */
         transition: transform 0.3s ease;
-        /* Transition de déplacement */
     }
     .nav-links.open {
         display: flex;
         max-height: 500px;
         padding: 10px 0;
         transform: translateX(0);
-        /* Le menu glisse de la droite vers la gauche */
     }
     .nav-links li {
         text-align: center;
