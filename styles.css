@@ -634,7 +634,7 @@ form {
     margin: 0 auto;
     background-color: #242424;
     padding: 20px;
-    border: 3px solid transparent;
+    border: 1px solid transparent;
     border-radius: 10px;
     transition: border 0.3s ease, box-shadow 0.3s ease;
 }
