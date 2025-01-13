@@ -806,4 +806,7 @@ form button:hover {
     .portfolio-link {
         margin-left: 35px;
     }
+    .skill {
+        margin-left: -12px;
+    }
 }
