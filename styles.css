@@ -307,7 +307,6 @@
         justify-content: space-around;
         padding: 50px;
         gap: 30px;
-        margin-bottom: 120px;
     }
     
     .biography h2 {
@@ -372,7 +371,7 @@
     .projects-section {
         text-align: center;
         padding: 50px 20px;
-        margin-bottom: 10%;
+        margin-bottom: 20%;
         color: #fff;
     }
     
@@ -731,33 +730,33 @@
         .burger.active:hover span {
             background-color: #ffb6c1;
         }
-        /* Menu caché à droite par défaut */
         .nav-links {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
             display: flex;
             flex-direction: column;
             position: absolute;
-            right: 0;
-            padding: 20px;
-            background-color: #1a1a1a;
+            top: 0;
+            left: 0;
+            gap: 20px;
             width: 100%;
+            background-color: #1a1a1a;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease, padding 0.3s ease;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease;
             z-index: 1;
-            height: auto;
-            overflow: hidden;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         .nav-links.open {
-            display: flex;
+            transform: translateY(70px);
+            opacity: 1;
             max-height: 500px;
-            padding: 10px 0;
-            transform: translateX(0);
+        }
+        .nav-links:not(.open) {
+            transform: translateY(-100%);
+            opacity: 0;
+            max-height: 0;
         }
         .nav-links li {
             text-align: center;
@@ -778,7 +777,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: -30px;
         }
         .portfolio-link {
             margin-left: 35px;
