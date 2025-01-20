@@ -2,7 +2,7 @@
         display: flex;
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #1a1a1a;
+        background-color: #141414;
         color: #fff;
     }
     
@@ -23,7 +23,7 @@
         justify-content: space-between;
         align-items: center;
         height: 70px;
-        background-color: #1a1a1a;
+        background-color: #141414;
         position: fixed;
         width: 100%;
         top: 0;
@@ -237,7 +237,6 @@
     .intro {
         opacity: 0;
         transform: translateY(50px);
-        /* Commence un peu en bas */
         animation: slideIn 1s forwards;
         animation-delay: 0.5s;
     }
@@ -248,7 +247,6 @@
     .intro a {
         opacity: 0;
         transform: translateY(30px);
-        /* Commence un peu plus bas pour chaque élément */
         animation: fadeIn 2.5s forwards;
     }
     
@@ -358,7 +356,7 @@
     
     .column {
         display: flex;
-        background-color: #242424;
+        background-color: #252525;
         padding: 15px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -366,7 +364,7 @@
         max-width: 90%;
         margin: 10px;
     }
-    /* Section des projets */
+    /* section des projets */
     
     .projects-section {
         text-align: center;
@@ -481,13 +479,13 @@
     }
     
     .skills-container {
-        background-color: #1c1c1c;
+        background-color: #141414;
         border: solid #ffc0cb;
         border-radius: 12px;
         padding: 30px;
         max-width: 400px;
         text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgb(0, 0, 0);
         margin-top: 50px;
         margin-bottom: 20px;
         flex: 1 1 40%;
