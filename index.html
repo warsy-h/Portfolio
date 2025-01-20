@@ -290,15 +290,28 @@
                 const progress = skill.querySelector('.progress');
                 const progressValue = skill.getAttribute('data-progress');
 
-                // Applique l'animation au chargement de la page (avant le survol)
-                progress.style.height = '0%';
+                // progress bar aau clic
+                skill.addEventListener('click', () => {
+                    if (skill.classList.contains('active')) {
+                        skill.classList.remove('active');
+                        progress.style.height = '0%';
+                    } else {
+                        skill.classList.add('active');
+                        progress.style.height = `${progressValue}%`;
+                    }
+                });
 
+                //progress bar au survol
                 skill.addEventListener('mouseenter', () => {
-                    progress.style.height = `${progressValue}%`; // Lors du survol, la hauteur est mise à jour
+                    if (!skill.classList.contains('active')) {
+                        progress.style.height = `${progressValue}%`;
+                    }
                 });
 
                 skill.addEventListener('mouseleave', () => {
-                    progress.style.height = '0%'; // Quand on quitte l'élément, la hauteur revient à 0
+                    if (!skill.classList.contains('active')) {
+                        progress.style.height = '0%';
+                    }
                 });
             });
         });

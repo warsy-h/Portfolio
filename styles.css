@@ -697,6 +697,12 @@
             text-shadow: 0 2px 5px #999999;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
+        .skill .progress {
+            height: 0%;
+        }
+        .skill.active .progress {
+            height: var(--progress);
+        }
         .burger {
             display: flex;
             flex-direction: column;
