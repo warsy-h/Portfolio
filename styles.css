@@ -305,6 +305,7 @@
         justify-content: space-around;
         padding: 50px;
         gap: 30px;
+        padding-bottom: 70px;
     }
     
     .biography h2 {
@@ -358,10 +359,10 @@
         display: flex;
         background-color: #252525;
         padding: 15px;
-        border-radius: 8px;
+        border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         flex: 1 1 100%;
-        max-width: 90%;
+        max-width: 80%;
         margin: 10px;
     }
     /* section des projets */
