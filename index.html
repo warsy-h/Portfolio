@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="project-card">
-                    <img class="image" src="bpmsport-rubrique ordi.jpg" alt="maquette pour un site de sport, section rubrique">
+                    <img class="image" src="bpmsport-rubrique-ordi.jpg" alt="maquette pour un site de sport, section rubrique">
                     <p class="image-legende">Maquette d'un site de sport.</p>
                 </div>
 
@@ -113,7 +113,7 @@
                     <div class="skills-grid">
 
                         <div class="skill" data-progress="70">
-                            <i class="icon-html"></i>
+                            <span class="icon-html"></span>
                             <div class="skill-text">
                                 <p>HTML</p>
                                 <span>intermédiaire</span>
@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="skill" data-progress="80">
-                            <i class="icon-css"></i>
+                            <span class="icon-css"></span>
                             <div class="skill-text">
                                 <p>CSS</p>
                                 <span>intermédiaire</span>
@@ -135,7 +135,7 @@
                         </div>
 
                         <div class="skill" data-progress="20">
-                            <i class="icon-php"></i>
+                            <span class="icon-php"></span>
                             <p>PHP</p>
                             <span>La théorie</span>
                             <div class="progress-bar">
@@ -150,7 +150,7 @@
                     <h3>Web-Design</h3>
                     <div class="skills-grid">
                         <div class="skill" data-progress="20">
-                            <i class="icon-figma"></i>
+                            <span class="icon-figma"></span>
                             <p>Figma</p>
                             <span>Léger</span>
                             <div class="progress-bar">
@@ -159,7 +159,7 @@
                         </div>
 
                         <div class="skill" data-progress="40">
-                            <i class="icon-premiere"></i>
+                            <span class="icon-premiere"></span>
                             <p>Premier Pro</p>
                             <span>Les bases</span>
                             <div class="progress-bar">
@@ -168,7 +168,7 @@
                         </div>
 
                         <div class="skill" data-progress="80">
-                            <i class="icon-illustrator"></i>
+                            <span class="icon-illustrator"></span>
                             <div class="skill-text">
                                 <p>Illustrator</p>
                                 <span>intermédiaire</span>
@@ -179,7 +179,7 @@
                         </div>
 
                         <div class="skill" data-progress="65">
-                            <i class="icon-photoshop"></i>
+                            <span class="icon-photoshop"></span>
                             <div class="skill-text">
                                 <p>Photoshop</p>
                                 <span>intermédiaire</span>
@@ -218,7 +218,7 @@
     </main>
 
     <script>
-        // Script 1 : Détection des sections visibles
+        // section visible au scroll
         function revealOnScroll() {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
@@ -226,21 +226,21 @@
                 const sectionBottom = section.getBoundingClientRect().bottom;
                 const viewportHeight = window.innerHeight;
 
-                // Vérifie si la section est partiellement visible
+                // vois si on la voit
                 if (sectionTop < viewportHeight && sectionBottom > 0) {
                     section.classList.add('visible');
                 } else {
-                    section.classList.remove('visible'); // Retire la classe si elle sort du viewport
+                    section.classList.remove('visible');
                 }
             });
         }
 
-        // Ajoute les événements pour le défilement
+        // animation scroll des secetion
         window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll); // Exécute au chargement initial
+        window.addEventListener('load', revealOnScroll);
 
 
-        // Script 3 : Gestion de l'animation d'intro
+        // intro animation
         document.addEventListener('DOMContentLoaded', () => {
             const introAnimation = document.querySelector('.intro-animation');
             const mainContent = document.querySelector('.main-content');
@@ -249,18 +249,18 @@
             setTimeout(() => {
                 introAnimation.classList.add('hidden');
                 mainContent.classList.add('visible');
-            }, 1000); // Temps avant l'animation de sortie
+            }, 1000);
         });
 
-        // Script 4 : Gestion de l'ombre sur le header
+        // lumière
         document.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             const biographySection = document.querySelector('#biography');
             const biographySectionTop = biographySection.getBoundingClientRect().top;
             const viewportHeight = window.innerHeight;
 
-            // Ajouter l'ombre dès que la section biography commence à entrer dans la vue
-            if (biographySectionTop <= viewportHeight * 0.3) { // 30% de la hauteur du viewport
+            // pour la lumière à la section biographie (quand elle commnce)
+            if (biographySectionTop <= viewportHeight * 0.3) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
