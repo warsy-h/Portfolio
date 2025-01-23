@@ -364,6 +364,12 @@
         flex: 1 1 100%;
         max-width: 80%;
         margin: 10px;
+        transition: border 0.3s ease, transform 0.3s ease;
+    }
+    
+    .column:hover {
+        border: solid 1px #e08e9d;
+        transform: scale(1.003);
     }
     /* section des projets */
     
