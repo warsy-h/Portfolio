@@ -91,18 +91,40 @@
             <div class="projects-container">
 
                 <div class="project-card">
-                    <img class="image" src="Affiche_CGW_RVB_coupé.jpg" alt="affiche pour la 3ème édition de la corsica games week">
-                    <p class="image-legende">Affiche pour un événement de jeux vidéo.</p>
+                    <img class="image" src="Affiche_CGW_RVB.jpg" alt="affiche pour la 3ème édition de la corsica games week">
+                    <p class="image-legende">Maquette d'une affiche pour la CGW.</p>
+                    <span class="badge badge-illustrator">Illustrator</span>
                 </div>
 
                 <div class="project-card">
-                    <img class="image" src="bpmsport-rubrique-ordi.jpg" alt="maquette pour un site de sport, section rubrique">
-                    <p class="image-legende">Maquette d'un site de sport.</p>
+                    <img class="image" src="affiche_tomorrowland.png" alt="maquette d'une affiche pour un événement musical - tomorrowland">
+                    <p class="image-legende">Maquette d'une affiche pour un festial de musique (Tomorrowland).</p>
+                    <span class="badge badge-photoshop">Photoshop</span>
                 </div>
 
                 <div class="project-card">
-                    <img class="image" src="HFAYA_Siwar_3.jpg" alt="affiche pour un événement musical - tomorrowland">
-                    <p class="image-legende">Affiche Tomorrowland.</p>
+                    <img class="image" src="le_jour_d'après.jpg" alt="maquette d'une affiche de film">
+                    <p class="image-legende">Maquette d'une affiche de film (réadaptation).</p>
+                    <span class="badge badge-photoshop">Photoshop</span>
+                </div>
+
+                <div class="project-card">
+                    <img class="image" src="affiche parfum2.png" alt="affiche pour un parfum">
+                    <p class="image-legende">Maquette d'une affiche de parfum.</p>
+                    <span class="badge badge-photoshop">Photoshop</span>
+                </div>
+
+                <div class="project-card">
+                    <img class="image" src="HFAYA_Siwar_Autoportrait_TP3.jpg" alt="autoportrait">
+                    <p class="image-legende">Autoportrait.</p>
+                    <span class="badge badge-photoshop">Photoshop</span>
+                    <span class="badge badge-photo">Photographie</span>
+                </div>
+
+                <div class="project-card">
+                    <img class="image" src="Hfaya_Siwar_Nature_Morte_TP3.jpg" alt="nature morte dans une ambiance tamisée avec une bougie et un chandellier, des livres et des fleurs séchées. ">
+                    <p class="image-legende">Nature morte.</p>
+                    <span class="badge badge-photo">Photographie</span>
                 </div>
 
             </div>
@@ -272,10 +294,6 @@
     </script>
 
     <script>
-        function toggleMenu(menu) {
-            menu.classList.toggle('open');
-        }
-
         function toggleMenu() {
             const burger = document.querySelector('.burger');
             const navLinks = document.querySelector('.nav-links');
@@ -283,6 +301,17 @@
             burger.classList.toggle('active');
             navLinks.classList.toggle('open');
         }
+
+        // Ferme le menu lorsqu'un lien est cliqué
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const burger = document.querySelector('.burger');
+                const navLinks = document.querySelector('.nav-links');
+
+                burger.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
     </script>
 
     <script>
