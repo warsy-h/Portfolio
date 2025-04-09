@@ -97,7 +97,7 @@
     
     .nav-links a:hover {
         color: #ffb6c1;
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .portfolio {
@@ -736,6 +736,9 @@
         position: static;
         bottom: 0;
         height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         left: 0;
         width: 100%;
         background-color: #121212;
@@ -746,14 +749,31 @@
     }
     
     .insta-link,
-    .github-link {
-        color: #ffc0cb;
+    .linkedin-link {
+        outline: none;
         text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
     }
     
-    .insta-link:hover,
-    .github-link:hover {
-        text-decoration: underline;
+    .logo-reseaux {
+        width: 40px;
+        height: auto;
+        margin-right: 3px;
+        transition: transform 0.3s ease;
+        vertical-align: middle;
+    }
+    
+    .logo-insta {
+        width: 60px;
+    }
+    
+    .logo-linkedin {
+        width: 42px;
+    }
+    
+    .logo-reseaux:hover {
+        transform: scale(1.2);
     }
     
     @media (max-width: 768px) {
