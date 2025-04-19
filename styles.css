@@ -910,6 +910,30 @@
         transform: rotateY(180deg);
         z-index: 1;
     }
+    
+    .btnglry {
+        border-radius: 30px;
+        background-color: #ffc0cb;
+        padding: 10px 15px;
+        font-size: 15px;
+        font-family: 'Cambria', serif;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        /* ajuste si besoin */
+    }
+    
+    .btnglry:hover {
+        cursor: pointer;
+        background-color: #e08e9d;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.05);
+    }
     /* section de contact ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     
     .contact-section {
