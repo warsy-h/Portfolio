@@ -136,31 +136,6 @@ body {
     animation-delay: 0.5s;
 }
 
-.intro h5,
-.intro h1,
-.intro p,
-.intro a {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 2.5s forwards;
-}
-
-.intro h5 {
-    animation-delay: 1.4s;
-}
-
-.intro h1 {
-    animation-delay: 1.7s;
-}
-
-.intro p {
-    animation-delay: 2s;
-}
-
-.intro a {
-    animation-delay: 2.3s;
-}
-
 @keyframes slideIn {
     to {
         opacity: 1;
@@ -295,8 +270,7 @@ body {
     height: 400px;
     border-radius: 10px;
     overflow: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
+    transition: transform 0.8s ease;
     position: relative;
 }
 
