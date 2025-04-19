@@ -61,7 +61,8 @@
     .skills,
     .biography,
     .projects-section,
-    .contact-section {
+    .contact-section,
+    .gallery {
         scroll-margin-top: 115px;
     }
     
