@@ -31,8 +31,13 @@
                 <li>
                     <a href="#accueil">Accueil</a>
                 </li>
-                <li>
+                <li class="dropdown">
                     <a href="#biography">Biographie</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#moi">Moi</a></li>
+                        <li><a href="#parcours">Parcours</a></li>
+                        <li><a href="#experiences">Expériences</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#projects">Projets</a>
@@ -67,7 +72,7 @@
         </section>
 
         <section class="biography section" id="biography">
-            <h2 class="title">Biographie</h2>
+            <h2 class="title" id="moi">Biographie</h2>
             <div class="profile">
                 <img src="moi_grrr.jpg" alt="Photo de profil de Hfaya Siwar" class="profile-img">
                 <div class="profile-info">
@@ -81,6 +86,61 @@
             <div class="column">
                 <p>Passionnée par la création numérique, j’ai aussi renforcé mes bases en montage vidéo avec Adobe Premiere Pro. Actuellement, je poursuis mon apprentissage en programmation avec le PHP, tout en explorant d'autres aspects du multimédia pour
                     enrichir mes compétences et élargir mon expertise.</p>
+            </div>
+
+
+            <div class="timeline-container">
+                <p class="subtitle" id="parcours">Parcours</p>
+                <ul class="timeline">
+                    <li>
+                        <div class="content">
+                            <h3>BUT MMI <span>2024 - présent</span></h3>
+                            <p>Formation pluridisciplinaire couvrant le développement web, la création numérique (graphisme, audiovisuel), la stratégie de communication et la gestion de projet.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Baccalauréat général <span>2024</span></h3>
+                            <p>Spécialités Mathématiques & Sciences de l’ingénieur.</p>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+
+
+                <p class="subtitle" id="experiences">Expériences</p>
+
+                <ul class="timeline">
+                    <li>
+                        <div class="content">
+                            <h3>Job en boulangerie<span>Été 2024</span></h3>
+                            <p>Cuisson, mise en rayon, gestion de la relation client et travail en équipe. Apprentissage de la gestion du temps et de la pression.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3> Stage de gymnastique<span>2022</span></h3>
+                            <p>Entraînement de jeunes gymnastes : apprentissage technique, accompagnement individualisé, présence attentive, écoute active et cohésion de groupe. </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Babysitting régulier<span>2016 - 2020</span></h3>
+                            <p>Responsabilité de l'entretien et de la sécurité des enfants, organisation d'activités ludiques et éducatives.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="content">
+                            <h3>Stage en école primaire<span>2021 (stage de 3ème)</span> </h3>
+                            <p>Aide à la préparation de cours, accompagnement des élèves dans leurs apprentissages et soutien pédagogique.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
         </section>
@@ -139,7 +199,7 @@
 
                         <div class="skill" data-progress="60">
                             <span class="icon-html"></span>
-                            <div class="skill-text">
+                            <div class="skill">
                                 <p>HTML</p>
                                 <span>Intermédiaire</span>
                             </div>
@@ -195,25 +255,25 @@
                             </div>
                         </div>
 
-                    </div>
-                </div>
-
-                <div class="skills-container">
-                    <h3>Web-Design</h3>
-                    <div class="skills-grid">
-                        <div class="skill" data-progress="20">
-                            <span class="icon-figma"></span>
-                            <p>Figma</p>
-                            <span>Léger</span>
+                        <div class="skill" data-progress="60">
+                            <span class="icon-php"></span>
+                            <p>PhpMyAdmin</p>
+                            <span>Intermédiaire</span>
                             <div class="progress-bar">
                                 <div class="progress"></div>
                             </div>
                         </div>
 
-                        <div class="skill" data-progress="30">
-                            <span class="icon-premiere"></span>
-                            <p>Premier Pro</p>
-                            <span>Les bases</span>
+                    </div>
+                </div>
+
+                <div class="skills-container">
+                    <h3>Design & Graphisme</h3>
+                    <div class="skills-grid">
+                        <div class="skill" data-progress="20">
+                            <span class="icon-figma"></span>
+                            <p>Figma</p>
+                            <span>Léger</span>
                             <div class="progress-bar">
                                 <div class="progress"></div>
                             </div>
@@ -241,6 +301,31 @@
                             </div>
                         </div>
 
+                        <div class="skill" data-progress="80">
+                            <span class="icon-photoshop"></span>
+                            <div class="skill-text">
+                                <p>Canva</p>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-container">
+                    <h3>Audiovisuel</h3>
+                    <div class="skills-grid">
+                        <div class="skill" data-progress="30">
+                            <span class="icon-premiere"></span>
+                            <p>Premier Pro</p>
+                            <span>Les bases</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+
                         <div class="skill" data-progress="70">
                             <span class="icon-illustrator"></span>
                             <div class="skill-text">
@@ -251,33 +336,296 @@
                                 <div class="progress"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="skills-container">
+                    <h3>Gestion de projet</h3>
+                    <div class="skills-grid">
+                        <div class="skill" data-progress="70">
+                            <span class="icon-figma"></span>
+                            <div class="skill-text">
+                                <p>Gantt</p>
+                            </div>
+                            <span>Intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill" data-progress="70">
+                            <span class="icon-photoshop"></span>
+                            <div class="skill-text">
+                                <p>Trello</p>
+                            </div>
+                            <span>Intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-container">
+                    <h3>Stratégie de communication</h3>
+                    <div class="skills-grid">
+                        <div class="skill" data-progress="70">
+                            <span class="icon-figma"></span>
+                            <div class="skill-text">
+                                <p>Public cible</p>
+                            </div>
+                            <span>Intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill" data-progress="60">
+                            <span class="icon-photoshop"></span>
+                            <p>Création de contenu</p>
+                            <span>Intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill" data-progress="60">
+                            <span class="icon-photoshop"></span>
+                            <p>Réseaux sociaux</p>
+                            <span>Intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill" data-progress="60">
+                            <span class="icon-photoshop"></span>
+                            <p>Analyse</p>
+                            <span>Intermédiaire</span>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
-            </div>
         </section>
 
-        <section class="contact-section section" id="contact">
+        <section class="gallery">
+            <h2>Galerie</h2>
+            <p class="sous-titre">London</p>
+            <div class="cartes london">
+
+                <div class="carte" id="carte4">
+                    <img src="photo4.jpg" alt="Photo 4 ">
+                </div>
+
+                <div class="carte" id="carte36">
+                    <img src="photo36.jpeg" alt="Photo 36 ">
+                </div>
+
+                <div class="carte" id="carte2">
+                    <img src="photo2.jpg" alt="Photo 2">
+                </div>
+
+                <div class="carte" id="carte3">
+                    <img src="photo3.jpg " alt="Photo 3 ">
+                </div>
+
+                <div class="carte hidden" id="carte9">
+                    <img src="photo9.jpeg" alt="Photo 9 ">
+                </div>
+
+                <div class="carte hidden" id="carte5">
+                    <img src="photo5.jpeg" alt="Photo 5 ">
+                </div>
+
+                <div class="carte hidden" id="carte6">
+                    <img src="photo6.jpeg" alt="Photo 6 ">
+                </div>
+
+                <div class="carte hidden" id="carte16">
+                    <img src="photo16.jpeg" alt="Photo 16 ">
+                </div>
+
+                <div class="carte hidden" id="carte42">
+                    <img src="photo42.jpeg" alt="Photo 42 ">
+                </div>
+
+                <div class="carte hidden" id="carte34">
+                    <img src="photo34.jpeg" alt="Photo 34 ">
+                </div>
+
+                <div class="carte hidden" id="carte39">
+                    <img src="photo39.jpeg" alt="Photo 39 ">
+                </div>
+
+                <div class="carte hidden" id="carte3">
+                    <img src="photo31.jpeg" alt="Photo 3 ">
+                </div>
+
+                <div class="carte hidden" id="carte33">
+                    <img src="photo33.jpeg" alt="Photo 33 ">
+                </div>
+
+                <div class="carte hidden" id="carte30">
+                    <img src="photo30.jpeg" alt="Photo 30 ">
+                </div>
+
+                <div class="carte hidden" id="carte17">
+                    <img src="photo17.jpeg" alt="Photo 17 ">
+                </div>
+
+                <div class="carte hidden" id="carte32">
+                    <img src="photo32.jpeg" alt="Photo 32 ">
+                </div>
+
+                <div class="carte hidden" id="carte10">
+                    <img src="photo10.jpeg" alt="Photo 10 ">
+                </div>
+
+                <div class="carte hidden" id="carte13">
+                    <img src="photo13.jpeg" alt="Photo 13 ">
+                </div>
+
+                <div class="carte hidden" id="carte14">
+                    <img src="photo14.jpeg" alt="Photo 14 ">
+                </div>
+
+                <div class="carte hidden" id="carte15">
+                    <img src="photo15.jpeg" alt="Photo 15 ">
+                </div>
+
+                <div class="carte hidden" id="carte7">
+                    <img src="photo7.jpeg" alt="Photo 7 ">
+                </div>
+
+                <div class="carte hidden" id="carte12">
+                    <img src="photo12.jpeg" alt="Photo 12 ">
+                </div>
+
+                <div class="carte hidden" id="carte11">
+                    <img src="photo11.jpeg" alt="Photo 11 ">
+                </div>
+
+                <div class="carte hidden" id="carte37">
+                    <img src="photo37.jpeg" alt="Photo 37 ">
+                </div>
+
+                <div class="carte hidden" id="carte40">
+                    <img src="photo40.jpeg" alt="Photo 40 ">
+                </div>
+
+                <div class="carte hidden" id="carte38">
+                    <img src="photo38.jpeg" alt="Photo 38 ">
+                </div>
+
+                <div class="carte hidden" id="carte41">
+                    <img src="photo41.jpeg" alt="Photo 41 ">
+                </div>
+
+                <div class="carte hidden" id="carte35">
+                    <img src="photo35.jpeg" alt="Photo 35 ">
+                </div>
+            </div>
+
+
+
+            <p class="sous-titre hidden">Tunisia</p>
+            <div class="cartes tunisia">
+
+                <div class="carte hidden" id="carte26">
+                    <img src="photo26.jpeg" alt="Photo 26 ">
+                </div>
+
+                <div class="carte hidden" id="carte19">
+                    <img src="photo19.jpeg" alt="Photo 19 ">
+                </div>
+
+                <div class="carte hidden" id="carte21">
+                    <img src="photo21.jpeg" alt="Photo 21 ">
+                </div>
+
+                <div class="carte hidden" id="carte24">
+                    <img src="photo24.jpeg" alt="Photo 24">
+                </div>
+
+                <div class="carte hidden" id="carte22">
+                    <img src="photo22.jpeg" alt="Photo 22 ">
+                </div>
+
+                <div class="carte hidden" id="carte25">
+                    <img src="photo25.jpeg" alt="Photo 25 ">
+                </div>
+
+                <div class="carte hidden" id="carte23">
+                    <img src="photo23.jpeg" alt="Photo 23 ">
+                </div>
+
+                <div class="carte hidden" id="carte28">
+                    <img src="photo28.jpeg" alt="Photo 28 ">
+                </div>
+
+                <div class="carte hidden" id="carte27">
+                    <img src="photo27.jpeg" alt="Photo 27 ">
+                </div>
+
+                <div class="carte hidden" id="carte46">
+                    <img src="photo46.jpg" alt="Photo 46 ">
+                </div>
+
+                <div class="carte hidden" id="carte48">
+                    <img src="photo48.jpg" alt="Photo 48 ">
+                </div>
+
+                <div class="carte hidden" id="carte49">
+                    <img src="photo49.jpg" alt="Photo 49 ">
+                </div>
+
+                <div class="carte hidden" id="carte47">
+                    <img src="photo47.jpg" alt="Photo 47 ">
+                </div>
+
+                <div class="carte hidden" id="carte50">
+                    <img src="photo50.jpg" alt="Photo 50 ">
+                </div>
+
+                <div class="carte hidden" id="carte51">
+                    <img src="photo51.jpg" alt="Photo 51 ">
+                </div>
+
+            </div>
+
+
+            <div class="voirplus-container">
+                <button class="voirplus" id="showMoreBtn">Voir plus 🠇</button>
+            </div>
+
+
+        </section>
+
+
+        <section class="contact-section section " id="contact ">
             <h2>Me contacter</h2>
-            <form action="#" method="post">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+            <form action="# " method="post ">
+                <label for="email ">Email :</label>
+                <input type="email " id="email " name="email " required>
 
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required>
+                <label for="nom ">Nom :</label>
+                <input type="text " id="nom " name="nom " required>
 
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom" required>
+                <label for="prenom ">Prénom :</label>
+                <input type="text " id="prenom " name="prenom " required>
 
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message ">Message :</label>
+                <textarea id="message " name="message " rows="5 " required></textarea>
 
-                <button type="submit">Envoyer</button>
+                <button type="submit ">Envoyer</button>
             </form>
         </section>
 
 
-        <div class="bottom-space"></div>
+        <div class="bottom-space "></div>
 
     </main>
 
@@ -351,6 +699,30 @@
                 navLinks.classList.remove('open');
             });
         });
+
+
+        //Section galerie - BOUTON - Afficher les autres photos
+
+        const showMoreBtn = document.getElementById('showMoreBtn');
+
+        // On sélectionne les cartes et les sous-titres à cacher/afficher
+        const hiddenCards = document.querySelectorAll('.gallery .carte.hidden, .gallery .carte:not(.hidden)');
+        const hiddenSubtitles = document.querySelectorAll('.gallery .sous-titre.hidden, .gallery .sous-titre:not(.hidden)');
+
+        let isExpanded = false;
+
+        showMoreBtn.addEventListener('click', () => {
+            hiddenCards.forEach(card => {
+                card.classList.toggle('hidden');
+            });
+
+            hiddenSubtitles.forEach(sub => {
+                sub.classList.toggle('hidden');
+            });
+
+            isExpanded = !isExpanded;
+            showMoreBtn.textContent = isExpanded ? 'Voir moins 🠅' : 'Voir plus 🠇';
+        });
     </script>
 
     <script>
@@ -391,16 +763,16 @@
 
 </body>
 
-<footer class="footer">
-    <div class="text-center">
+<footer class="footer ">
+    <div class="text-center ">
         <p>&copy; 2024 Tous droits réservés.</p>
         <p>
-            <a href="https://www.instagram.com/siwar.hfy/" target="_blank" class="insta-link">
-                <img src="logo-insta.png" alt="Instagram" class="logo-reseaux logo-insta">
+            <a href="https://www.instagram.com/siwar.hfy/ " target="_blank " class="insta-link ">
+                <img src="logo-insta.png " alt="Instagram " class="logo-reseaux logo-insta ">
             </a>
 
-            <a href="https://www.linkedin.com/in/siwar-hfaya/" target="_blank" class="linkedin-link">
-                <img src="logo-linkedin.png" alt="Linkedin" class="logo-reseaux logo-linkedin">
+            <a href="https://www.linkedin.com/in/siwar-hfaya/ " target="_blank " class="linkedin-link ">
+                <img src="logo-linkedin.png " alt="Linkedin " class="logo-reseaux logo-linkedin ">
             </a>
         </p>
     </div>
