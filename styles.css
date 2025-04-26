@@ -116,6 +116,10 @@ body {
     font-size: 1.0625rem;
 }
 
+.burger {
+    display: none;
+}
+
 
 /* sous menu ------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -1191,6 +1195,10 @@ footer {
         cursor: pointer;
         z-index: 2;
         transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        background: none;
+        /* Si c'est un <button> */
+        border: none;
+        /* Si c'est un <button> */
     }
     .burger span {
         width: 1.875rem;
