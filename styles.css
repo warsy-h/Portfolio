@@ -106,7 +106,8 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
-    padding: 0.75rem 0.375rem;
+    padding: 1rem 0.75rem;
+    /* Ajusté pour garantir une hauteur de 44px */
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
@@ -354,7 +355,8 @@ body {
 
 .button {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.25rem;
+    /* Ajusté pour avoir une taille plus équilibrée */
     font-size: 1.125rem;
     font-weight: bold;
     font-family: 'Cambria', serif;
