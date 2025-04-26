@@ -1119,6 +1119,8 @@ footer {
 .logo-reseaux {
     width: 2.5rem;
     height: auto;
+    min-width: 44px;
+    min-height: 44px;
     margin-right: 0.1875rem;
     transition: transform 0.3s ease;
     vertical-align: middle;
