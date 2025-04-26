@@ -483,22 +483,32 @@
     </main>
 
     <script>
+        let debounceTimeout;
+
         // section visible au scroll
         function revealOnScroll() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const sectionBottom = section.getBoundingClientRect().bottom;
-                const viewportHeight = window.innerHeight;
+            clearTimeout(debounceTimeout); // Annule l'ancien timer
+            debounceTimeout = setTimeout(() => { // Lance un nouveau timer
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const sectionBottom = section.getBoundingClientRect().bottom;
+                    const viewportHeight = window.innerHeight;
 
-                // vois si on la voit
-                if (sectionTop < viewportHeight && sectionBottom > 0) {
-                    section.classList.add('visible');
-                } else {
-                    section.classList.remove('visible');
-                }
-            });
+                    // vois si on la voit
+                    if (sectionTop < viewportHeight && sectionBottom > 0) {
+                        section.classList.add('visible');
+                    } else {
+                        section.classList.remove('visible');
+                    }
+                });
+            }, 100); // Attend 100ms avant d'exécuter
         }
+
+        // animation scroll des sections
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
 
         // animation scroll des secetion
         window.addEventListener('scroll', revealOnScroll);
@@ -519,16 +529,16 @@
 
 
         // intro animation
-        document.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('load', () => {
             const introAnimation = document.querySelector('.intro-animation');
             const mainContent = document.querySelector('.main-content');
-
 
             setTimeout(() => {
                 introAnimation.classList.add('hidden');
                 mainContent.classList.add('visible');
             }, 1000);
         });
+
 
         // lumière
         document.addEventListener('scroll', function() {
