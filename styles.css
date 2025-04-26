@@ -670,9 +670,9 @@ body {
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.875rem;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 500;
-    text-shadow: 0.0625rem 0.0625rem 0.1875rem #0000007d;
+    text-shadow: 0.0625rem 0.0625rem 0.1875rem #dbdbdb7d;
     display: inline-block;
     margin-bottom: 0.3125rem;
 }
@@ -698,15 +698,15 @@ body {
 }
 
 .badge-photoshop {
-    background-color: #31A8FF;
+    background-color: #93d2ff;
 }
 
 .badge-illustrator {
-    background-color: #FF9A00;
+    background-color: #ffc56f;
 }
 
 .badge-photo {
-    background-color: #ec2d70;
+    background-color: #ff92b8;
 }
 
 .badge-github {
