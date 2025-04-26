@@ -485,50 +485,31 @@
     <script>
         let debounceTimeout;
 
-        // section visible au scroll
+        // Fonction pour révéler les sections au scroll
         function revealOnScroll() {
-            clearTimeout(debounceTimeout); // Annule l'ancien timer
-            debounceTimeout = setTimeout(() => { // Lance un nouveau timer
-                const sections = document.querySelectorAll('.section');
+            clearTimeout(debounceTimeout); // Annule l'ancien timer pour éviter des appels incessants
+            debounceTimeout = setTimeout(() => { // Lance un nouveau timer après 100ms
+                const sections = document.querySelectorAll('.section'); // Sélectionne toutes les sections
                 sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    const sectionBottom = section.getBoundingClientRect().bottom;
-                    const viewportHeight = window.innerHeight;
+                    const sectionTop = section.getBoundingClientRect().top; // Distance du haut de la section
+                    const sectionBottom = section.getBoundingClientRect().bottom; // Distance du bas de la section
+                    const viewportHeight = window.innerHeight; // Hauteur de la fenêtre du navigateur
 
-                    // vois si on la voit
+                    // Vérifie si la section est visible à l'écran
                     if (sectionTop < viewportHeight && sectionBottom > 0) {
-                        section.classList.add('visible');
+                        section.classList.add('visible'); // Ajoute la classe 'visible' si la section est visible
                     } else {
-                        section.classList.remove('visible');
+                        section.classList.remove('visible'); // Retire la classe 'visible' si la section est hors de l'écran
                     }
                 });
-            }, 100); // Attend 100ms avant d'exécuter
+            }, 10); // Timeout de 100ms pour limiter les appels fréquents
         }
 
-        // animation scroll des sections
+        // Attache les événements 'scroll' et 'load' pour exécuter la fonction 'revealOnScroll'
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
 
-
-        // animation scroll des secetion
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
-
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-
-        // intro animation
+        // Animation pour l'intro
         window.addEventListener('load', () => {
             const introAnimation = document.querySelector('.intro-animation');
             const mainContent = document.querySelector('.main-content');
@@ -539,24 +520,22 @@
             }, 1000);
         });
 
-
-        // lumière
+        // Lumière à la section biographie
         document.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             const biographySection = document.querySelector('#biography');
             const biographySectionTop = biographySection.getBoundingClientRect().top;
             const viewportHeight = window.innerHeight;
 
-            // pour la lumière à la section biographie (quand elle commnce)
+            // Ajoute une classe 'scrolled' au header lorsque la section biographie commence à apparaître
             if (biographySectionTop <= viewportHeight * 0.3) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
-    </script>
 
-    <script>
+        // Fonction pour basculer le menu
         function toggleMenu() {
             const burger = document.querySelector('.burger');
             const navLinks = document.querySelector('.nav-links');
@@ -575,9 +554,8 @@
                 navLinks.classList.remove('open');
             });
         });
-    </script>
 
-    <script>
+        // Gestion de la barre de progression
         window.addEventListener('DOMContentLoaded', () => {
             const skills = document.querySelectorAll('.skill');
 
@@ -585,7 +563,7 @@
                 const progress = skill.querySelector('.progress');
                 const progressValue = skill.getAttribute('data-progress');
 
-                // progress bar aau clic
+                // Progress bar au clic
                 skill.addEventListener('click', () => {
                     if (skill.classList.contains('active')) {
                         skill.classList.remove('active');
@@ -596,7 +574,7 @@
                     }
                 });
 
-                //progress bar au survol
+                // Progress bar au survol
                 skill.addEventListener('mouseenter', () => {
                     if (!skill.classList.contains('active')) {
                         progress.style.height = `${progressValue}%`;
