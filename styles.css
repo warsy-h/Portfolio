@@ -72,12 +72,10 @@ body {
 
 .timeline-container {
     scroll-margin-top: 90px;
-    /* ajuste selon la taille de ton header */
 }
 
 #experiences {
     scroll-margin-top: 130px;
-    /* ou ajuste selon la hauteur de ton header */
 }
 
 .navbar {
@@ -665,32 +663,50 @@ body {
     border-radius: 9999px;
     font-size: 0.875rem;
     color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px #0000007d;
     display: inline-block;
     margin-bottom: 5px;
 }
 
 .badge-html {
-    background-color: #db2777;
+    background-color: #E34F26;
 }
 
 .badge-css {
-    background-color: #0284c7;
+    background-color: #1572B6;
 }
 
 .badge-js {
-    background-color: #f59e0b;
+    background-color: #f8dc07;
+}
+
+.badge-tailwindcss {
+    background-color: #1572B6;
+}
+
+.badge-php {
+    background-color: #8993BE;
 }
 
 .badge-photoshop {
-    background-color: #0066ff;
+    background-color: #31A8FF;
 }
 
 .badge-illustrator {
-    background-color: #ef7300;
+    background-color: #FF9A00;
 }
 
 .badge-photo {
     background-color: #ec2d70;
+}
+
+.badge-github {
+    background-color: #181717;
+}
+
+.badge-wordpress {
+    background-color: #21759B;
 }
 
 
@@ -944,6 +960,8 @@ body {
 .btnglry {
     border-radius: 30px;
     border: none;
+    color: inherit;
+    text-decoration: none;
     color: #121212;
     background-color: #ffc0cb;
     padding: 10px 15px;
