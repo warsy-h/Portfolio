@@ -85,27 +85,27 @@
                     <p id="me ">Me</p>
                 </div>
             </div>
-            <div class="column ">
+            <div class="column">
                 <p>Après avoir obtenu mon baccalauréat avec les spécialités mathématiques et sciences de l'ingénieur, j'ai intégré ma première année du BUT Métiers du Multimédia et de l'Internet (MMI). Passionnée par le développement et le design web, cette
                     formation me permet de développer des compétences variées dans le domaine du numérique, notamment en développement web (HTML, CSS) et en design graphique avec des outils comme Illustrator et Photoshop.</p>
             </div>
-            <div class="column ">
+            <div class="column">
                 <p>Passionnée par la création numérique, j’ai aussi renforcé mes bases en montage vidéo avec Adobe Premiere Pro. Actuellement, je poursuis mon apprentissage en programmation avec le PHP, tout en explorant d'autres aspects du multimédia pour
                     enrichir mes compétences et élargir mon expertise.</p>
             </div>
 
 
-            <div class="timeline-container " id="parcours ">
+            <div class="timeline-container" id="parcours">
                 <p class="subtitle ">Parcours</p>
                 <ul class="timeline ">
                     <li>
-                        <div class="content ">
+                        <div class="content">
                             <h3>BUT MMI <span>2024 - présent</span></h3>
                             <p>Formation pluridisciplinaire couvrant le développement web, la création numérique (graphisme, audiovisuel), la stratégie de communication et la gestion de projet.</p>
                         </div>
                     </li>
                     <li>
-                        <div class="content ">
+                        <div class="content">
                             <h3>Baccalauréat général <span>2024</span></h3>
                             <p>Spécialités Mathématiques & Sciences de l’ingénieur.</p>
                         </div>
@@ -116,32 +116,32 @@
 
 
 
-                <p class="subtitle " id="experiences ">Expériences</p>
+                <p class="subtitle" id="experiences">Expériences</p>
 
-                <ul class="timeline ">
+                <ul class="timeline">
                     <li>
-                        <div class="content ">
+                        <div class="content">
                             <h3>Job en boulangerie<span>Été 2024</span></h3>
                             <p>Cuisson, mise en rayon, gestion de la relation client et travail en équipe. Apprentissage de la gestion du temps et de la pression.</p>
                         </div>
                     </li>
 
                     <li>
-                        <div class="content ">
+                        <div class="content">
                             <h3> Stage de gymnastique<span>2022</span></h3>
                             <p>Entraînement de jeunes gymnastes : apprentissage technique, accompagnement individualisé, présence attentive, écoute active et cohésion de groupe. </p>
                         </div>
                     </li>
 
                     <li>
-                        <div class="content ">
+                        <div class="content">
                             <h3>Babysitting régulier<span>2016 - 2020</span></h3>
                             <p>Responsabilité de l'entretien et de la sécurité des enfants, organisation d'activités ludiques et éducatives.</p>
                         </div>
                     </li>
 
                     <li>
-                        <div class="content ">
+                        <div class="content">
                             <h3>Stage en école primaire<span>2021 (stage de 3ème)</span> </h3>
                             <p>Aide à la préparation de cours, accompagnement des élèves dans leurs apprentissages et soutien pédagogique.</p>
                         </div>
@@ -151,18 +151,18 @@
 
         </section>
 
-        <section class="projects-section section " id="projects ">
+        <section class="projects-section section" id="projects">
             <h2>Mes projets</h2>
 
-            <div class="projects-container ">
+            <div class="projects-container">
 
-                <div class="project-card ">
+                <div class="project-card">
                     <img class="image " src="Affiche_CGW_RVB.webp " alt="affiche pour la 3ème édition de la corsica games week " width="600 " height="400 ">
                     <p class="image-legende ">Maquette d'une affiche pour la CGW.</p>
                     <span class="badge badge-illustrator ">Illustrator</span>
                 </div>
 
-                <div class="project-card ">
+                <div class="project-card">
                     <img class="image " src="affiche_tomorrowland.webp " alt="maquette d 'une affiche pour un événement musical - tomorrowland" width="600" height="400">
                     <p class="image-legende">Maquette d'une affiche pour un festial de musique (Tomorrowland).</p>
                     <span class="badge badge-photoshop">Photoshop</span>
@@ -483,80 +483,103 @@
     </main>
 
     <script>
-        let debounceTimeout;
+        window.addEventListener('DOMContentLoaded', () => {
+            let debounceTimeout;
 
-        // Fonction pour révéler les sections au scroll
-        function revealOnScroll() {
-            clearTimeout(debounceTimeout); // Annule l'ancien timer pour éviter des appels incessants
-            debounceTimeout = setTimeout(() => { // Lance un nouveau timer après 100ms
-                const sections = document.querySelectorAll('.section'); // Sélectionne toutes les sections
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top; // Distance du haut de la section
-                    const sectionBottom = section.getBoundingClientRect().bottom; // Distance du bas de la section
-                    const viewportHeight = window.innerHeight; // Hauteur de la fenêtre du navigateur
+            // Fonction pour révéler les sections au scroll
+            function revealOnScroll() {
+                clearTimeout(debounceTimeout); // Annule l'ancien timer pour éviter des appels incessants
+                debounceTimeout = setTimeout(() => { // Lance un nouveau timer après 100ms
+                    const sections = document.querySelectorAll('.section'); // Sélectionne toutes les sections
+                    sections.forEach(section => {
+                        const sectionTop = section.getBoundingClientRect().top; // Distance du haut de la section
+                        const sectionBottom = section.getBoundingClientRect().bottom; // Distance du bas de la section
+                        const viewportHeight = window.innerHeight; // Hauteur de la fenêtre du navigateur
 
-                    // Vérifie si la section est visible à l'écran
-                    if (sectionTop < viewportHeight && sectionBottom > 0) {
-                        section.classList.add('visible'); // Ajoute la classe 'visible' si la section est visible
-                    } else {
-                        section.classList.remove('visible'); // Retire la classe 'visible' si la section est hors de l'écran
-                    }
-                });
-            }, 10); // Timeout de 100ms pour limiter les appels fréquents
-        }
+                        // Vérifie si la section est visible à l'écran
+                        if (sectionTop < viewportHeight && sectionBottom > 0) {
+                            section.classList.add('visible'); // Ajoute la classe 'visible' si la section est visible
+                        } else {
+                            section.classList.remove('visible'); // Retire la classe 'visible' si la section est hors de l'écran
+                        }
+                    });
+                }, 10); // Timeout de 100ms pour limiter les appels fréquents
+            }
 
-        // Attache les événements 'scroll' et 'load' pour exécuter la fonction 'revealOnScroll'
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
+            // Attache les événements 'scroll' et 'load' pour exécuter la fonction 'revealOnScroll'
+            window.addEventListener('scroll', revealOnScroll);
+            window.addEventListener('load', revealOnScroll);
 
-        // Animation pour l'intro
-        window.addEventListener('load', () => {
+            // Animation pour l'intro
             const introAnimation = document.querySelector('.intro-animation');
             const mainContent = document.querySelector('.main-content');
 
             setTimeout(() => {
-                introAnimation.classList.add('hidden');
-                mainContent.classList.add('visible');
-            }, 1000);
-        });
+                if (introAnimation) {
+                    introAnimation.classList.add('hidden'); // Cacher l'élément d'intro après 1 seconde
+                }
+                if (mainContent) {
+                    mainContent.classList.add('visible'); // Afficher le contenu principal
+                } else {
+                    console.error('Élément .main-content non trouvé');
+                }
+            }, 1000); // Ajoute la classe après 1 seconde
 
-        // Lumière à la section biographie
-        document.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            const biographySection = document.querySelector('#biography');
-            const biographySectionTop = biographySection.getBoundingClientRect().top;
-            const viewportHeight = window.innerHeight;
+            // Lumière à la section biographie
+            document.addEventListener('scroll', function() {
+                const header = document.querySelector('.header');
+                const biographySection = document.querySelector('#biography');
 
-            // Ajoute une classe 'scrolled' au header lorsque la section biographie commence à apparaître
-            if (biographySectionTop <= viewportHeight * 0.3) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+                if (biographySection) { // Vérifie que la section biographie existe
+                    const biographySectionTop = biographySection.getBoundingClientRect().top;
+                    const viewportHeight = window.innerHeight;
 
-        // Fonction pour basculer le menu
-        function toggleMenu() {
-            const burger = document.querySelector('.burger');
-            const navLinks = document.querySelector('.nav-links');
+                    // Ajoute une classe 'scrolled' au header lorsque la section biographie commence à apparaître
+                    if (biographySectionTop <= viewportHeight * 0.3) {
+                        if (header) header.classList.add('scrolled');
+                    } else {
+                        if (header) header.classList.remove('scrolled');
+                    }
+                } else {
+                    console.error('Élément #biography non trouvé');
+                }
+            });
 
-            burger.classList.toggle('active');
-            navLinks.classList.toggle('open');
-        }
-
-        // Ferme le menu lorsqu'un lien est cliqué
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
+            // Fonction pour basculer le menu
+            function toggleMenu() {
                 const burger = document.querySelector('.burger');
                 const navLinks = document.querySelector('.nav-links');
 
-                burger.classList.remove('active');
-                navLinks.classList.remove('open');
-            });
-        });
+                if (burger && navLinks) {
+                    burger.classList.toggle('active'); // Ajoute ou enlève la classe active sur le burger
+                    navLinks.classList.toggle('open'); // Ajoute ou enlève la classe open sur les liens du menu
+                } else {
+                    console.error('Élément .burger ou .nav-links non trouvé');
+                }
+            }
 
-        // Gestion de la barre de progression
-        window.addEventListener('DOMContentLoaded', () => {
+            // Ajoute l'événement click sur le burger
+            const burger = document.querySelector('.burger');
+            if (burger) {
+                burger.addEventListener('click', toggleMenu); // Basculer le menu lorsqu'on clique sur le burger
+            } else {
+                console.error('Élément .burger non trouvé');
+            }
+
+            // Ferme le menu lorsqu'un lien est cliqué
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    const burger = document.querySelector('.burger');
+                    const navLinks = document.querySelector('.nav-links');
+
+                    if (burger && navLinks) {
+                        burger.classList.remove('active');
+                        navLinks.classList.remove('open');
+                    }
+                });
+            });
+
+            // Gestion de la barre de progression
             const skills = document.querySelectorAll('.skill');
 
             skills.forEach(skill => {
@@ -567,22 +590,22 @@
                 skill.addEventListener('click', () => {
                     if (skill.classList.contains('active')) {
                         skill.classList.remove('active');
-                        progress.style.height = '0%';
+                        if (progress) progress.style.height = '0%';
                     } else {
                         skill.classList.add('active');
-                        progress.style.height = `${progressValue}%`;
+                        if (progress) progress.style.height = `${progressValue}%`;
                     }
                 });
 
                 // Progress bar au survol
                 skill.addEventListener('mouseenter', () => {
-                    if (!skill.classList.contains('active')) {
+                    if (!skill.classList.contains('active') && progress) {
                         progress.style.height = `${progressValue}%`;
                     }
                 });
 
                 skill.addEventListener('mouseleave', () => {
-                    if (!skill.classList.contains('active')) {
+                    if (!skill.classList.contains('active') && progress) {
                         progress.style.height = '0%';
                     }
                 });
