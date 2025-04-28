@@ -1141,25 +1141,7 @@ footer {
 
 /* media query ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-@media (max-width: 48em) {
-    .name-mobile {
-        display: flex;
-        font-size: 0.9375rem;
-        color: #f7edf0;
-        text-shadow: 0 0.125rem 0.3125rem #999999;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-    /* gallery-----------------------------------*/
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-    /*skills ---------------*/
-    .skill .progress {
-        height: 0%;
-    }
-    .skill.active .progress {
-        height: var(--progress);
-    }
+@media (max-width: 990px) {
     /* timeline---------------------------*/
     .timeline-container {
         padding: 0 1.25rem;
@@ -1185,6 +1167,27 @@ footer {
         left: -1.0625rem;
         right: auto;
         border-color: transparent #ffb6c1 transparent transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .name-mobile {
+        display: flex;
+        font-size: 0.9375rem;
+        color: #f7edf0;
+        text-shadow: 0 0.125rem 0.3125rem #999999;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    /* gallery-----------------------------------*/
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    /*skills ---------------*/
+    .skill .progress {
+        height: 0%;
+    }
+    .skill.active .progress {
+        height: var(--progress);
     }
     /* menu burger -----------------------------------------*/
     .burger {
